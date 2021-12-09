@@ -1,4 +1,5 @@
 
+import matplotlib.pyplot as graph
 cupcake_invoices = open("CupcakeInvoices.csv")
 
 # Loop through all the data and print each row.
@@ -34,3 +35,25 @@ for line in cupcake_invoices:
 print(total)
 
 cupcake_invoices.close()
+
+
+# Advanced
+
+# x axis values
+x = ["Mon", "Tue", "Wed", "Thur", "Fri", "Sat", "Sun"]
+# corresponding y axis values
+y = [20, 30, 42, 64, 60, 52, 21]
+
+# plotting the points
+graph.plot(x, y)
+
+# naming the x axis
+graph.xlabel('Day Purchased')
+# naming the y axis
+graph.ylabel('Cupcakes Purchased')
+
+# giving a title to my graph
+graph.title('My Cupcake Sales')
+
+# function to show the plot
+graph.show()
